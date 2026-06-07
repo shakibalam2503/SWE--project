@@ -1,0 +1,69 @@
+version: "3.1"
+
+intents:
+  - greet
+  - search_property
+  - inform
+
+entities:
+  - location
+  - budget
+  - property_type
+  - bedrooms
+  - bathrooms
+  - property_amenities
+  - landmark
+
+slots:
+  landmark:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: landmark
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+  budget:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: budget
+  property_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: property_type
+  bedrooms:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: bedrooms
+  bathrooms:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: bathrooms
+  property_amenities:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: property_amenities
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm your EasyRent AI Assistant. What kind of property are you looking for today? (e.g., '2 bedroom apartment in Khilgaon under 25000')"
+  utter_ask_location:
+  - text: "Which area or location are you interested in?"
+  utter_ask_budget:
+  - text: "Could you please tell me your monthly budget for rent?"
+  utter_default:
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase your search?"
+
+actions:
+  - action_search_properties
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

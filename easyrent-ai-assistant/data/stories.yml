@@ -1,0 +1,9 @@
+version: "3.1"
+
+stories:
+- story: greet and search
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_property
+  - action: action_search_properties

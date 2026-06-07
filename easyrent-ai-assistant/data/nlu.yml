@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good afternoon
+    - hi there
+    
+- intent: search_property
+  examples: |
+    - i want a [house](property_type) in [khilgaon](location)
+    - looking for an [apartment](property_type) under [25000](budget)
+    - find me a [2](bedrooms) bed [apartment](property_type) in [dhaka](location)
+    - looking for a [2](bedrooms) bedroom [apartment](property_type)
+    - [3](bedrooms) bedrooms [house](property_type)
+    - [hostel](property_type) under [10000](budget)
+    - show me [commercial](property_type) spaces near [airport](landmark)
+    - properties near [hospital](landmark)
+    - find a [house](property_type) near [park](landmark)
+    - i want an [apartment](property_type) near [uiu](landmark)
+    - looking for a flat near [al hera jame masjid](landmark)
+    - show me places close to [north south university](landmark)
+    - [house](property_type) near [brac university](landmark)
+    - i need a flat with [3](bathrooms) baths
+    - [1](bathrooms) bathroom flat
+    - [apartment](property_type) with [parking](property_amenities) and [wifi](property_amenities)
+    - search for a [house](property_type)
+    - rent an [apartment](property_type) in [badda](location) under [30000](budget)
+    - [3](bedrooms) bed [2](bathrooms) bath flat in [dhanmondi](location)
+    
+- intent: inform
+  examples: |
+    - [dhaka](location)
+    - [khilgaon](location)
+    - [badda](location)
+    - [25000](budget)
+    - [20000](budget)
+    - [house](property_type)
+    - [apartment](property_type)

@@ -1,0 +1,335 @@
+.admin-layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+.admin-header {
+    height: 64px;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.admin-brand-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.admin-brand-horizontal h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d2137;
+}
+
+.admin-badge {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.admin-top-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #0d2137;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0d2137;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.header-icon {
+    color: #64748b;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.header-icon:hover {
+    color: #0d2137;
+}
+
+.admin-profile-top {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.admin-profile-top:hover {
+    background: #f1f5f9;
+}
+
+.profile-initials {
+    width: 32px;
+    height: 32px;
+    background: #0d2137;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.profile-details-mini {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.profile-role {
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+.admin-main-horizontal {
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ─── Admin Dashboard Stats ─── */
+.admin-dashboard-home {
+    padding: 8px 0;
+}
+
+.admin-stats-header {
+    margin-bottom: 28px;
+}
+
+.admin-stats-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d2137;
+    margin-bottom: 6px;
+}
+
+.admin-stats-header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.admin-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+}
+
+.asc-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.asc-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.asc-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.asc-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0d2137;
+    line-height: 1.1;
+}
+
+.asc-sub {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.admin-stats-loading {
+    padding: 40px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ─── Admin User Management ─── */
+.admin-user-management {
+    padding: 8px 0;
+}
+
+.aum-header {
+    margin-bottom: 20px;
+}
+
+.aum-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d2137;
+    margin-bottom: 4px;
+}
+
+.aum-header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.aum-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.aum-filter-pill {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.aum-filter-pill.active,
+.aum-filter-pill:hover {
+    background: #0d2137;
+    color: white;
+    border-color: #0d2137;
+}
+
+.aum-table-wrapper {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.aum-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.aum-table th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.aum-table td {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.aum-table tr:last-child td {
+    border-bottom: none;
+}
+
+.aum-table tr:hover td {
+    background: #f8fafc;
+}
+
+.aum-name {
+    font-weight: 600;
+    color: #0d2137;
+}
+
+.aum-role-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.aum-status-badge {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.aum-empty {
+    text-align: center;
+    padding: 32px;
+    color: #94a3b8;
+    font-size: 14px;
+}
